@@ -1,0 +1,66 @@
+{
+  "name": "svg-to-png",
+  "version": "0.1.0",
+  "description": "An SVG to PNG web-app conversor",
+  "main": "src/index.ts",
+  "scripts": {
+    "i18n:compile": "formatjs compile-folder src/i18n/translations src/i18n/compiled-translations",
+    "posti18n:compile": "prettier --write src/i18n/compiled-translations",
+    "i18n:extract": "formatjs extract 'src/**/*.ts*' --out-file src/i18n/translations/en.json --id-interpolation-pattern '[sha512:contenthash:base64:6]'",
+    "posti18n:extract": "sync-json --new -s src/i18n/translations/en.json src/i18n/translations/es.json && prettier --write src/i18n/translations",
+    "serve": "webpack serve --config webpack.js --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josan-Coba/svg-to-png.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Josan-Coba/svg-to-png/issues"
+  },
+  "homepage": "https://github.com/Josan-Coba/svg-to-png#readme",
+  "dependencies": {
+    "@popperjs/core": "2.11.0",
+    "@tailwindcss/forms": "0.3.4",
+    "classnames": "2.3.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-dropzone": "11.4.2",
+    "react-intl": "5.23.0",
+    "react-popper": "2.2.5"
+  },
+  "devDependencies": {
+    "@formatjs/cli": "4.5.0",
+    "@formatjs/ts-transformer": "3.7.0",
+    "@types/react": "17.0.37",
+    "@types/react-dom": "17.0.11",
+    "@types/webpack": "5.28.0",
+    "@typescript-eslint/eslint-plugin": "5.5.0",
+    "@typescript-eslint/parser": "5.5.0",
+    "autoprefixer": "10.4.0",
+    "copy-webpack-plugin": "10.0.0",
+    "css-loader": "6.5.1",
+    "eslint": "8.4.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-plugin-import": "2.25.3",
+    "eslint-plugin-react": "7.27.1",
+    "eslint-plugin-react-hooks": "4.3.0",
+    "eslint-webpack-plugin": "3.1.1",
+    "html-webpack-plugin": "5.5.0",
+    "mini-css-extract-plugin": "2.4.5",
+    "postcss": "8.4.4",
+    "postcss-custom-properties": "12.0.0",
+    "postcss-loader": "6.2.1",
+    "prettier": "2.5.1",
+    "source-map-loader": "3.0.0",
+    "sync-json": "2.0.0-beta.0",
+    "tailwindcss": "2.2.19",
+    "ts-loader": "9.2.6",
+    "typescript": "4.5.2",
+    "webpack": "5.64.4",
+    "webpack-cli": "4.9.1",
+    "webpack-dev-server": "4.6.0"
+  }
+}

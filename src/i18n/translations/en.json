@@ -1,0 +1,35 @@
+{
+  "app.description": {
+    "defaultMessage": "Just a simple converter from SVG to PNG, because I needed one that provided correct conversions."
+  },
+  "app.download-button.label": {
+    "defaultMessage": "Download"
+  },
+  "app.footer.made-by": {
+    "defaultMessage": "Made with ❤️ by <a>Josan Coba</a>."
+  },
+  "app.size-controls.aspect-ratio-label": {
+    "defaultMessage": "Keep aspect ratio?"
+  },
+  "app.size-controls.height-label": {
+    "defaultMessage": "Height"
+  },
+  "app.size-controls.width-label": {
+    "defaultMessage": "Width"
+  },
+  "app.title": {
+    "defaultMessage": "SVG 🡒 PNG"
+  },
+  "app.upload-resource.message-body": {
+    "defaultMessage": "Drag and drop a file here, or click to select a file from your device"
+  },
+  "app.upload-resource.message-body-drag-accept": {
+    "defaultMessage": "Drop the file here!"
+  },
+  "app.upload-resource.message-body-drag-active": {
+    "defaultMessage": "Drop a file here..."
+  },
+  "app.upload-resource.message-body-drag-reject": {
+    "defaultMessage": "The file will be rejected due to invalid MIME type"
+  }
+}

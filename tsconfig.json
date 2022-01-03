@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "lib": ["dom", "es2020", "ESNext.Intl"],
+    "newLine": "LF",
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "module": "commonjs",
+    "outDir": "src/dist",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es2020",
+    "types": ["node"]
+  },
+  "include": ["src/**/*"]
+}

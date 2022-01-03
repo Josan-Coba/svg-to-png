@@ -1,0 +1,35 @@
+{
+  "app.description": {
+    "defaultMessage": "Un conversor de SVG a PNG, porque necesitaba uno que hiciese conversiones correctas."
+  },
+  "app.download-button.label": {
+    "defaultMessage": "Descargar"
+  },
+  "app.footer.made-by": {
+    "defaultMessage": "Hecho con ❤️ por <a>Josan Coba</a>."
+  },
+  "app.size-controls.aspect-ratio-label": {
+    "defaultMessage": "¿Conservar relación de aspecto?"
+  },
+  "app.size-controls.height-label": {
+    "defaultMessage": "Alto"
+  },
+  "app.size-controls.width-label": {
+    "defaultMessage": "Ancho"
+  },
+  "app.title": {
+    "defaultMessage": "SVG 🡒 PNG"
+  },
+  "app.upload-resource.message-body": {
+    "defaultMessage": "Arrastra y suelta un fichero aquí, o clica para seleccionar un fichero de tu dispositivo"
+  },
+  "app.upload-resource.message-body-drag-accept": {
+    "defaultMessage": "¡Suelta el fichero aquí!"
+  },
+  "app.upload-resource.message-body-drag-active": {
+    "defaultMessage": "Suelta un fichero aquí..."
+  },
+  "app.upload-resource.message-body-drag-reject": {
+    "defaultMessage": "El fichero será rechazado debido a incompatibilidad de tipos MIME"
+  }
+}
