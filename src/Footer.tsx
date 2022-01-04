@@ -9,9 +9,22 @@ const Footer: React.FC = () => {
       <div>
         <LanguageSelector />
       </div>
-      <div className="py-8">
+      <div className="pt-8">
+        <a
+          href="https://github.com/Josan-Coba/svg-to-png"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="GitHub Repository"
+            className="mx-auto"
+            src="/static/GitHub-Mark-32px.png"
+          />
+        </a>
+      </div>
+      <div className="py-8 align-middle">
         <FormattedMessage
-          defaultMessage="Made with ❤️ by <a>Josan Coba</a>."
+          defaultMessage="Made with ❤️ by <a>Josan</a>"
           id="app.footer.made-by"
           values={{
             a: profileLink,

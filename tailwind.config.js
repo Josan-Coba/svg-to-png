@@ -36,9 +36,21 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['"Montserrat Alternates"', ...defaultTheme.fontFamily.sans],
-        mono: ['"Fira Mono"', ...defaultTheme.fontFamily.mono],
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        display: [
+          '"Montserrat Alternates"',
+          ...defaultTheme.fontFamily.sans,
+          '"Noto Sans Symbols 2"',
+        ],
+        mono: [
+          '"Fira Mono"',
+          ...defaultTheme.fontFamily.mono,
+          '"Noto Sans Symbols 2"',
+        ],
+        sans: [
+          'Montserrat',
+          ...defaultTheme.fontFamily.sans,
+          '"Noto Sans Symbols 2"',
+        ],
       },
       fontSize: {
         tiny: ['0.625rem', '1rem'],

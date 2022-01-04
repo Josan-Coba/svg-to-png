@@ -1,3 +1,5 @@
 /node_modules
 .vscode
 /src/i18n/compiled-translations
+/dist
+.env

@@ -1,7 +1,7 @@
 const path = require('path')
-// const CopyPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
-// const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
@@ -21,7 +21,7 @@ module.exports = {
       directory: path.resolve(__dirname, 'dist/'),
     },
   },
-  devtool: 'source-map',
+  devtool: process.env.NODE_ENV === 'production' ? undefined : 'source-map',
   entry: { index: path.resolve(__dirname, 'src/index.ts') },
   mode: 'production',
   module: {
@@ -85,55 +85,60 @@ module.exports = {
   },
   output: {
     clean: true,
-    filename: 'artifacts/[name].[contenthash].js',
+    filename: 'artifacts/[name].js',
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '/',
   },
   plugins: [
     new ESLintPlugin({ context: 'src/' }),
     new MiniCssExtractPlugin({
-      chunkFilename: '[id].[contenthash].css',
-      filename: 'artifacts/[name].[contenthash].css',
+      chunkFilename: '[id].css',
+      filename: 'artifacts/[name].css',
     }),
     new HtmlWebpackPlugin({
       appMountId: 'app-root',
       filename: 'index.html',
       inject: false,
       links: [
-        { href: 'https://fonts.gstatic.com', rel: 'preconnect' },
-        'https://fonts.googleapis.com/css2?family=Fira+Mono&family=Montserrat+Alternates:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap',
+        { href: 'https://fonts.googleapis.com', rel: 'preconnect' },
+        {
+          crossOrigin: '',
+          href: 'https://fonts.gstatic.com',
+          rel: 'preconnect',
+        },
+        'https://fonts.googleapis.com/css2?family=Fira+Mono&family=Montserrat+Alternates:wght@500;600&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Symbols+2&display=swap',
       ],
       template: '!!ts-loader!src/index.template',
       title: 'SVG to PNG',
     }),
-    // new FaviconsWebpackPlugin({
-    //   favicons: {
-    //     appDescription: null,
-    //     background: '#4A0734',
-    //     developerURL: null,
-    //     icons: {
-    //       android: false,
-    //       appleIcon: false,
-    //       appleStartup: false,
-    //       coast: false,
-    //       favicons: true,
-    //       firefox: false,
-    //       windows: false,
-    //       yandex: false,
-    //     },
-    //     theme_color: '#FF92DA',
-    //   },
-    //   inject: true,
-    //   logo: './src/static/logo.svg',
-    //   mode: 'webapp',
-    //   prefix: 'static/',
-    // }),
-    // new CopyPlugin({
-    //   patterns: [
-    //     // { from: 'src/web/static-root/' },
-    //     { from: 'src/static/', to: 'static/' },
-    //   ],
-    // }),
+    new FaviconsWebpackPlugin({
+      favicons: {
+        appDescription: null,
+        background: '#4A0734',
+        developerURL: null,
+        icons: {
+          android: false,
+          appleIcon: false,
+          appleStartup: false,
+          coast: false,
+          favicons: true,
+          firefox: false,
+          windows: false,
+          yandex: false,
+        },
+        theme_color: '#FF92DA',
+      },
+      inject: true,
+      logo: './src/static/logo.svg',
+      mode: 'webapp',
+      prefix: 'static/',
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/.nojekyll' },
+        { from: 'src/static/', to: 'static/' },
+      ],
+    }),
   ],
   resolve: {
     extensions: ['.ts', '.js', '.tsx', '.jsx', '.json', '.mjs', '.wasm'],
