@@ -121,6 +121,10 @@
     grid: 0 auto / 80px 32px 80px;
     grid-auto-flow: column;
   }
+
+  .preview-image-object {
+    width: calc(100vw - theme('spacing.28'));
+  }
 }
 
 /* The popper-arrow styles are out of layer because PurgeCSS was messing with them */

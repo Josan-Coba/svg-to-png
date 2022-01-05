@@ -31,5 +31,8 @@
   },
   "app.upload-resource.message-body-drag-reject": {
     "defaultMessage": "El fichero será rechazado debido a incompatibilidad de tipos MIME"
+  },
+  "app.upload-resource.message-disclaimer": {
+    "defaultMessage": "(El fichero será procesado en tu dispositivo. No se va a enviar a ninguna parte)"
   }
 }

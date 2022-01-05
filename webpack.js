@@ -116,6 +116,7 @@ module.exports = {
         },
         'https://fonts.googleapis.com/css2?family=Fira+Mono&family=Montserrat+Alternates:wght@500;600&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Symbols+2&display=swap',
       ],
+      mobile: true,
       template: '!!ts-loader!src/index.template',
       title: 'SVG to PNG',
     }),

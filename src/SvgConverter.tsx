@@ -75,7 +75,7 @@ export default function SvgConverter(props: SvgConverterProps): ReactElement {
   }, [data])
 
   return (
-    <div className="flex-none mx-auto flex my-4">
+    <div className="flex-none -mx-2 sm:mx-auto my-4 flex flex-wrap justify-center gap-y-4 gap-x-2">
       <SizeInput
         aspectRatio={aspectRatio}
         onChange={onSizeChange}
@@ -83,10 +83,11 @@ export default function SvgConverter(props: SvgConverterProps): ReactElement {
       />
       <button
         className={classNames(
-          'w-max h-full tpg-menu-1 flex flex-none justify-center mx-2 rounded-lg',
-          'text-secondary bg-transparent p-0 pt-2.5 pb-2.5 px-4 border-0',
+          'w-max h-full tpg-menu-1 flex flex-none justify-center rounded-lg',
+          'text-secondary bg-transparent p-0 pt-2.5 pb-2.5 px-4',
           'focus:outline-primary',
           'disabled:cursor-not-allowed disabled:opacity-50',
+          'disabled:border disabled:border-secondary disabled:border-opacity-50',
           typeof data !== 'undefined' &&
             'elevation-dp2 hover:bg-primary hover:bg-opacity-20',
           typeof data !== 'undefined' &&

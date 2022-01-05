@@ -92,10 +92,10 @@ module.exports = {
     extend: {
       backgroundColor: ['active'],
       backgroundOpacity: ['active'],
-      borderColor: ['active'],
-      borderOpacity: ['active'],
+      borderColor: ['active', 'disabled'],
+      borderOpacity: ['active', 'disabled'],
       borderStyle: ['active', 'focus', 'hover'],
-      borderWidth: ['active', 'focus', 'hover'],
+      borderWidth: ['active', 'disabled', 'focus', 'hover'],
       boxShadow: ['active'],
       cursor: ['disabled'],
       opacity: ['disabled'],

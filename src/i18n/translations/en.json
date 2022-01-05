@@ -31,5 +31,8 @@
   },
   "app.upload-resource.message-body-drag-reject": {
     "defaultMessage": "The file will be rejected due to invalid MIME type"
+  },
+  "app.upload-resource.message-disclaimer": {
+    "defaultMessage": "(The file will be processed in your device. It will not be sent anywhere)"
   }
 }

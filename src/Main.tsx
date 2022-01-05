@@ -8,7 +8,7 @@ export default function Main(): ReactElement {
   return (
     <>
       <I18nProvider>
-        <div className="text-secondary min-h-full max-w-7xl mx-8 xl:mx-auto">
+        <div className="text-secondary min-h-full max-w-7xl mx-4 sm:mx-8 xl:mx-auto">
           <main>
             <FrontPage />
           </main>

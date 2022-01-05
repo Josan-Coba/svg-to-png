@@ -8,7 +8,7 @@ const FrontPage: React.FC = () => {
   return (
     <div className="text-center">
       <div className="my-8">
-        <h1 className="font-display font-medium text-secondary text-4xl sm:text-7xl">
+        <h1 className="font-display font-medium text-secondary text-5xl sm:text-7xl whitespace-nowrap">
           <FormattedMessage defaultMessage="SVG 🡒 PNG" id="app.title" />
         </h1>
         <div className="my-8">

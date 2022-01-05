@@ -148,13 +148,15 @@ export default function SvgLoader(props: SvgLoaderProps): ReactElement {
       {...getRootProps({
         className: classNames(
           'focusable-wrapper',
-          typeof filePreview === 'undefined' ? 'w-96 h-48' : 'min-w-max h-auto',
+          typeof filePreview === 'undefined'
+            ? 'w-full sm:w-96 h-72'
+            : 'min-w-max h-auto',
         ),
       })}
     >
       <div
         className={classNames(
-          'focusable w-full h-full flex items-center justify-center p-4',
+          'focusable w-full h-full flex items-center justify-center p-6',
           'rounded-lg border-2 border-secondary border-opacity-70 border-dashed',
           'hover:bg-primary hover:bg-opacity-20',
           'ring-primary ring-opacity-80',
@@ -162,7 +164,12 @@ export default function SvgLoader(props: SvgLoaderProps): ReactElement {
         )}
       >
         <input {...getInputProps()} />
-        <div className="w-full h-full tpg-menu-2 text-center flex items-center justify-center">
+        <div
+          className={classNames(
+            'w-full h-full flex items-center justify-center',
+            'font-sans font-medium text-secondary text-center text-base tracking-wider',
+          )}
+        >
           {isLoading ? (
             <SpinnerIcon className="animate-spin -ml-1 mr-3 w-8 h-8 text-secondary" />
           ) : isDragAccept ? (
@@ -189,7 +196,7 @@ export default function SvgLoader(props: SvgLoaderProps): ReactElement {
           ) : typeof filePreview !== 'undefined' ? (
             <div className="w-full h-full relative">
               <object
-                className="max-w-40v max-h-60v mx-auto"
+                className="preview-image-object max-w-screen-md mx-auto"
                 data={filePreview}
                 onLoad={onLoadObject}
                 ref={htmlObjectRef}
@@ -207,12 +214,20 @@ export default function SvgLoader(props: SvgLoaderProps): ReactElement {
               )}
             </div>
           ) : (
-            <p>
-              <FormattedMessage
-                defaultMessage="Drag and drop a file here, or click to select a file from your device"
-                id="app.upload-resource.message-body"
-              />
-            </p>
+            <div className="space-y-4">
+              <p>
+                <FormattedMessage
+                  defaultMessage="Drag and drop a file here, or click to select a file from your device"
+                  id="app.upload-resource.message-body"
+                />
+              </p>
+              <p className="text-sm">
+                <FormattedMessage
+                  defaultMessage="(The file will be processed in your device. It will not be sent anywhere)"
+                  id="app.upload-resource.message-disclaimer"
+                />
+              </p>
+            </div>
           )}
         </div>
       </div>
