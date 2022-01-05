@@ -106,6 +106,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       appMountId: 'app-root',
       filename: 'index.html',
+      googleAnalytics: {
+        measurementId: 'G-4C0XKPNWDZ',
+      },
       inject: false,
       links: [
         { href: 'https://fonts.googleapis.com', rel: 'preconnect' },

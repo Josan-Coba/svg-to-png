@@ -9,7 +9,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 type TemplateOptions = HtmlPluginOptions & {
   appMountId?: string
   appMountIds?: string[]
-  googleAnalytics?: { pageViewOnLoad: boolean; trackingId: string }
+  googleAnalytics?: { measurementId: string }
   lang?: string
   links?: (string | React.LinkHTMLAttributes<HTMLLinkElement>)[]
   mobile?: boolean
@@ -38,16 +38,15 @@ const HtmlPage: React.FC<TemplateParameter> = ({
 
   let googleAnalyticsScript = ''
   if (googleAnalytics) {
-    if (!googleAnalytics.trackingId) {
-      throw new Error('required googleAnalytics.trackingId config')
+    if (!googleAnalytics.measurementId) {
+      throw new Error('required googleAnalytics.measurementId config')
     } else {
       googleAnalyticsScript = `
-        window.GoogleAnalyticsObject='ga';
-        window.ga=function(){ga.q.push(arguments)};
-        ga.q=[];
-        ga.l=+new Date;
-        ga('create','${googleAnalytics.trackingId}','auto');
-        ${googleAnalytics.pageViewOnLoad ? "ga('send','pageview');" : ''}`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${googleAnalytics.measurementId}');
+      `
     }
   }
 
@@ -71,6 +70,19 @@ const HtmlPage: React.FC<TemplateParameter> = ({
             }
           })}
 
+        {googleAnalytics && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalytics.measurementId}`}
+            ></script>
+            <script
+              type="text/javascript"
+              dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }}
+            ></script>
+          </>
+        )}
+
         {headTags.map(mapHtmlTagObject)}
       </head>
       <body>
@@ -89,21 +101,6 @@ const HtmlPage: React.FC<TemplateParameter> = ({
         })}
 
         {bodyTags.map(mapHtmlTagObject)}
-
-        {googleAnalytics && (
-          <>
-            <script
-              type="text/javascript"
-              dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }}
-            ></script>
-            <script
-              async
-              defer
-              src="https://www.google-analytics.com/analytics.js"
-              type="text/javascript"
-            ></script>
-          </>
-        )}
       </body>
     </html>
   )
