@@ -8,6 +8,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const PRODUCTION_PUBLIC_PATH = '/svg-to-png/'
 const isProduction = process.env.NODE_ENV === 'production'
 
+const APP_DESCRIPTION =
+  'SVG to PNG converter - A simple web-app tool to convert images .svg into format .png of any size'
+const APP_NAME = 'SVG to PNG'
+const APP_URL = 'https://josan-coba.github.io/svg-to-png/'
+
 module.exports = {
   devServer: {
     devMiddleware: {
@@ -119,6 +124,26 @@ module.exports = {
         },
         'https://fonts.googleapis.com/css2?family=Fira+Mono&family=Montserrat+Alternates:wght@500;600&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Symbols+2&display=swap',
       ],
+      meta: {
+        'application-name': APP_NAME,
+        'color-scheme': 'only light',
+        'description': APP_DESCRIPTION,
+        'og:description': {
+          content: APP_DESCRIPTION,
+          property: 'og:description',
+        },
+        'og:image': {
+          content:
+            'https://josan-coba.github.io/svg-to-png/static/thumbnail.png',
+          property: 'og:image',
+        },
+        'og:title': { content: APP_NAME, property: 'og:title' },
+        'og:type': { content: 'website', property: 'og:type' },
+        'og:url': {
+          content: APP_URL,
+          property: 'og:url',
+        },
+      },
       mobile: true,
       template: '!!ts-loader!src/index.template',
       title: 'SVG to PNG',

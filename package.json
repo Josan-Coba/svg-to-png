@@ -1,7 +1,7 @@
 {
   "name": "svg-to-png",
   "version": "0.1.0",
-  "description": "An SVG to PNG web-app conversor",
+  "description": "SVG to PNG converter - A simple web-app tool to convert SVGs to PNGs of any size",
   "main": "src/index.ts",
   "scripts": {
     "prebuild": "npm run i18n:compile",

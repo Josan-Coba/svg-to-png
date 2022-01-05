@@ -12,6 +12,7 @@ type TemplateOptions = HtmlPluginOptions & {
   googleAnalytics?: { measurementId: string }
   lang?: string
   links?: (string | React.LinkHTMLAttributes<HTMLLinkElement>)[]
+  metaTags?: React.MetaHTMLAttributes<HTMLMetaElement>[]
   mobile?: boolean
   scripts?: (string | React.ScriptHTMLAttributes<HTMLScriptElement>)[]
   title?: string
@@ -27,6 +28,7 @@ const HtmlPage: React.FC<TemplateParameter> = ({
     googleAnalytics,
     lang = 'en',
     links = [],
+    metaTags = [],
     mobile,
     scripts = [],
     title,
@@ -60,6 +62,12 @@ const HtmlPage: React.FC<TemplateParameter> = ({
         {mobile && (
           <meta content="width=device-width, initial-scale=1" name="viewport" />
         )}
+
+        {!!metaTags?.length &&
+          metaTags.map((metaAttributes) => {
+            // eslint-disable-next-line react/jsx-key
+            return <meta {...metaAttributes} />
+          })}
 
         {!!links?.length &&
           links.map((linkAttributes) => {
