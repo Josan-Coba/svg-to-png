@@ -779,17 +779,6 @@ a:focus {
   color: rgba(74, 7, 52, var(--tw-text-opacity));
 }
 
-.tpg-menu-2 {
-  text-align: left;
-  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  --tw-text-opacity: 1;
-  color: rgba(74, 7, 52, var(--tw-text-opacity));
-}
-
 .tpg-prop-label {
   text-align: left;
   font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
@@ -824,6 +813,10 @@ a:focus {
   grid-auto-flow: column;
 }
 
+.preview-image-object {
+  width: calc(100vw - 7rem);
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -848,19 +841,19 @@ a:focus {
   margin: 0.125rem;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.mx-8 {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.-mx-2 {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
 }
 
 .my-4 {
@@ -961,8 +954,8 @@ a:focus {
   height: 2rem;
 }
 
-.h-48 {
-  height: 12rem;
+.h-72 {
+  height: 18rem;
 }
 
 .h-auto {
@@ -981,10 +974,6 @@ a:focus {
   height: 100%;
 }
 
-.max-h-60v {
-  max-height: 60vh;
-}
-
 .min-h-full {
   min-height: 100%;
 }
@@ -999,10 +988,6 @@ a:focus {
 
 .w-48 {
   width: 12rem;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .w-4\/5 {
@@ -1033,8 +1018,8 @@ a:focus {
   max-width: 100%;
 }
 
-.max-w-40v {
-  max-width: 40vw;
+.max-w-screen-md {
+  max-width: 768px;
 }
 
 .flex-initial {
@@ -1144,6 +1129,21 @@ a:focus {
   justify-content: center;
 }
 
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+.gap-y-4 {
+  row-gap: 1rem;
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .self-center {
   align-self: center;
 }
@@ -1173,6 +1173,10 @@ a:focus {
 
 .border-2 {
   border-width: 2px;
+}
+
+.disabled\:border:disabled {
+  border-width: 1px;
 }
 
 .border-b-2 {
@@ -1220,6 +1224,11 @@ a:focus {
   border-color: rgba(255, 146, 218, var(--tw-border-opacity));
 }
 
+.disabled\:border-secondary:disabled {
+  --tw-border-opacity: 1;
+  border-color: rgba(74, 7, 52, var(--tw-border-opacity));
+}
+
 .border-opacity-30 {
   --tw-border-opacity: 0.3;
 }
@@ -1238,6 +1247,10 @@ a:focus {
 
 .active\:border-opacity-100:active {
   --tw-border-opacity: 1;
+}
+
+.disabled\:border-opacity-50:disabled {
+  --tw-border-opacity: 0.5;
 }
 
 .bg-transparent {
@@ -1292,8 +1305,8 @@ a:focus {
   padding: 0.5rem;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-1 {
@@ -1375,6 +1388,10 @@ a:focus {
   vertical-align: middle;
 }
 
+.font-sans {
+  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
+}
+
 .font-display {
   font-family: "Montserrat Alternates", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
 }
@@ -1384,9 +1401,14 @@ a:focus {
   line-height: 1.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-medium {
@@ -1399,6 +1421,10 @@ a:focus {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
 }
 
 .text-primary {
@@ -1565,6 +1591,20 @@ a:focus {
 }
 
 @media (min-width: 640px) {
+  .sm\:mx-8 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:w-96 {
+    width: 24rem;
+  }
+
   .sm\:text-7xl {
     font-size: 4.5rem;
     line-height: 1;
