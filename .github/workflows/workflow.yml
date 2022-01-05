@@ -36,11 +36,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm i -g npm@7
       - run: npm ci
-      # - run: npm test
-      - run: npm run deploy
+      - run: npm run build
         env:
           NODE_ENV: production
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
-          DIST_PATH: './dist'
+      # - run: npm test
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@v2.5.0
+        env:
+          REPO: self
+          BRANCH: dist
+          FOLDER: dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

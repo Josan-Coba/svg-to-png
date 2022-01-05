@@ -2,6 +2,9 @@ import React, { ReactNode } from 'react'
 import { FormattedMessage } from 'react-intl'
 import LanguageSelector from './i18n/LanguageSelector'
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const githubLogo = require('./images/GitHub-Mark-32px.png') as string
+
 const Footer: React.FC = () => {
   return (
     <footer className="text-center">
@@ -15,11 +18,7 @@ const Footer: React.FC = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <img
-            alt="GitHub Repository"
-            className="mx-auto"
-            src="/static/GitHub-Mark-32px.png"
-          />
+          <img alt="GitHub Repository" className="mx-auto" src={githubLogo} />
         </a>
       </div>
       <div className="py-8 align-middle">

@@ -5,10 +5,13 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
+const PRODUCTION_PUBLIC_PATH = '/svg-to-png/'
+const isProduction = process.env.NODE_ENV === 'production'
+
 module.exports = {
   devServer: {
     devMiddleware: {
-      publicPath: '/',
+      publicPath: isProduction ? PRODUCTION_PUBLIC_PATH : '/',
     },
     headers: {
       'Access-Control-Allow-Headers':
@@ -21,7 +24,7 @@ module.exports = {
       directory: path.resolve(__dirname, 'dist/'),
     },
   },
-  devtool: process.env.NODE_ENV === 'production' ? undefined : 'source-map',
+  devtool: isProduction ? undefined : 'source-map',
   entry: { index: path.resolve(__dirname, 'src/index.ts') },
   mode: 'production',
   module: {
@@ -68,6 +71,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        type: 'asset/resource',
+      },
     ],
   },
   optimization: {
@@ -84,10 +91,11 @@ module.exports = {
     },
   },
   output: {
+    assetModuleFilename: 'static/[hash][ext][query]',
     clean: true,
     filename: 'artifacts/[name].js',
     path: path.resolve(__dirname, 'dist/'),
-    publicPath: '/',
+    publicPath: isProduction ? PRODUCTION_PUBLIC_PATH : '/',
   },
   plugins: [
     new ESLintPlugin({ context: 'src/' }),
