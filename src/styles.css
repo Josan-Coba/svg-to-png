@@ -174,3 +174,7 @@
 .popper-container[data-show] {
   display: block;
 }
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
