@@ -1,6 +1,6 @@
 {
   "name": "svg-to-png",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "SVG to PNG converter - A simple web-app tool to convert SVGs to PNGs of any size",
   "main": "src/index.ts",
   "scripts": {
