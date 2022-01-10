@@ -719,7 +719,7 @@ select {
 
 html, body {
   --tw-bg-opacity: 1;
-  background-color: rgba(255, 250, 254, var(--tw-bg-opacity));
+  background-color: rgba(250, 255, 250, var(--tw-bg-opacity));
 }
 
 .ringed-focus:focus {
@@ -732,7 +732,7 @@ html, body {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(255, 146, 218, var(--tw-ring-opacity));
   --tw-ring-opacity: 0.8;
-  --tw-ring-offset-color: #FFFAFE;
+  --tw-ring-offset-color: #FAFFFA;
 }
 
 .focusable:focus, .focusable-wrapper:focus {
@@ -761,43 +761,91 @@ a:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(255, 146, 218, var(--tw-ring-opacity));
   --tw-ring-opacity: 0.8;
-  --tw-ring-offset-color: #FFFAFE;
+  --tw-ring-offset-color: #FAFFFA;
 }
 
 a:focus {
   --tw-ring-offset-width: 2px;
 }
 
-.tpg-menu-1 {
-  text-align: left;
+.tpg-title {
+  white-space: nowrap;
+  font-family: "Montserrat Alternates", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgba(2, 39, 2, var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .tpg-title {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
+.tpg-controller {
   font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   --tw-text-opacity: 1;
-  color: rgba(74, 7, 52, var(--tw-text-opacity));
+  color: rgba(2, 39, 2, var(--tw-text-opacity));
 }
 
-.tpg-prop-label {
-  text-align: left;
+.tpg-controller-info {
+  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgba(2, 39, 2, var(--tw-text-opacity));
+}
+
+.tpg-controller-label {
   font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
   font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgba(74, 7, 52, var(--tw-text-opacity));
-}
-
-.tpg-tool-label {
-  text-align: left;
-  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgba(74, 7, 52, var(--tw-text-opacity));
+  color: rgba(2, 39, 2, var(--tw-text-opacity));
   --tw-text-opacity: 0.7;
+}
+
+.tpg-body-1 {
+  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgba(2, 39, 2, var(--tw-text-opacity));
+}
+
+.tpg-body-2 {
+  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgba(2, 39, 2, var(--tw-text-opacity));
+}
+
+.tpg-caption {
+  text-align: left;
+  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgba(2, 39, 2, var(--tw-text-opacity));
+}
+
+.no-spinner {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .no-spinner::-webkit-inner-spin-button,
@@ -1206,7 +1254,7 @@ a:focus {
 
 .border-secondary {
   --tw-border-opacity: 1;
-  border-color: rgba(74, 7, 52, var(--tw-border-opacity));
+  border-color: rgba(2, 39, 2, var(--tw-border-opacity));
 }
 
 .focus\:border-primary:focus {
@@ -1216,7 +1264,7 @@ a:focus {
 
 .focus\:border-secondary:focus {
   --tw-border-opacity: 1;
-  border-color: rgba(74, 7, 52, var(--tw-border-opacity));
+  border-color: rgba(2, 39, 2, var(--tw-border-opacity));
 }
 
 .active\:border-primary:active {
@@ -1226,7 +1274,7 @@ a:focus {
 
 .disabled\:border-secondary:disabled {
   --tw-border-opacity: 1;
-  border-color: rgba(74, 7, 52, var(--tw-border-opacity));
+  border-color: rgba(2, 39, 2, var(--tw-border-opacity));
 }
 
 .border-opacity-30 {
@@ -1257,9 +1305,14 @@ a:focus {
   background-color: transparent;
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
 .bg-surface {
   --tw-bg-opacity: 1;
-  background-color: rgba(255, 250, 254, var(--tw-bg-opacity));
+  background-color: rgba(250, 255, 250, var(--tw-bg-opacity));
 }
 
 .hover\:bg-primary:hover {
@@ -1290,7 +1343,7 @@ a:focus {
 }
 
 .via-secondary {
-  --tw-gradient-stops: var(--tw-gradient-from), #4A0734, var(--tw-gradient-to, rgba(74, 7, 52, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), #022702, var(--tw-gradient-to, rgba(2, 39, 2, 0));
 }
 
 .to-transparent {
@@ -1319,11 +1372,6 @@ a:focus {
   padding-right: 1rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .pt-2 {
   padding-top: 0.5rem;
 }
@@ -1334,10 +1382,6 @@ a:focus {
 
 .pt-6 {
   padding-top: 1.5rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
 }
 
 .pt-2\.5 {
@@ -1354,6 +1398,10 @@ a:focus {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .pb-px {
@@ -1388,10 +1436,6 @@ a:focus {
   vertical-align: middle;
 }
 
-.font-sans {
-  font-family: Montserrat, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
-}
-
 .font-display {
   font-family: "Montserrat Alternates", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", "Noto Sans Symbols 2";
 }
@@ -1399,20 +1443,6 @@ a:focus {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.font-medium {
-  font-weight: 500;
 }
 
 .font-semibold {
@@ -1423,10 +1453,6 @@ a:focus {
   text-transform: capitalize;
 }
 
-.tracking-wider {
-  letter-spacing: 0.05em;
-}
-
 .text-primary {
   --tw-text-opacity: 1;
   color: rgba(255, 146, 218, var(--tw-text-opacity));
@@ -1434,7 +1460,7 @@ a:focus {
 
 .text-secondary {
   --tw-text-opacity: 1;
-  color: rgba(74, 7, 52, var(--tw-text-opacity));
+  color: rgba(2, 39, 2, var(--tw-text-opacity));
 }
 
 .text-opacity-50 {
@@ -1590,10 +1616,6 @@ a:focus {
   display: block;
 }
 
-input[type='number'] {
-  -moz-appearance: textfield;
-}
-
 @media (min-width: 640px) {
   .sm\:mx-8 {
     margin-left: 2rem;
@@ -1607,11 +1629,6 @@ input[type='number'] {
 
   .sm\:w-96 {
     width: 24rem;
-  }
-
-  .sm\:text-7xl {
-    font-size: 4.5rem;
-    line-height: 1;
   }
 }
 
