@@ -83,8 +83,8 @@ export default function SvgConverter(props: SvgConverterProps): ReactElement {
       />
       <button
         className={classNames(
-          'w-max h-full tpg-menu-1 flex flex-none justify-center rounded-lg',
-          'text-secondary bg-transparent p-0 pt-2.5 pb-2.5 px-4',
+          'w-max h-full tpg-controller flex flex-none justify-center rounded-lg',
+          'bg-white p-0 pt-2.5 pb-2.5 px-4',
           'focus:outline-primary',
           'disabled:cursor-not-allowed disabled:opacity-50',
           'disabled:border disabled:border-secondary disabled:border-opacity-50',
@@ -222,7 +222,7 @@ function DimensionInput({
     <>
       <label
         className={classNames(
-          'tpg-tool-label mt-1 mr-0 mb-0 px-1',
+          'tpg-controller-label mt-1 mr-0 mb-0 px-1',
           isFocused && 'text-primary text-opacity-100',
           disabled && 'text-opacity-50',
           {
@@ -236,7 +236,7 @@ function DimensionInput({
       </label>
       <input
         className={classNames(
-          'w-full h-full tpg-menu-1 no-spinner',
+          'w-full h-full tpg-controller no-spinner',
           'bg-transparent p-0 pt-5 px-1 border-0',
           disabled && 'text-opacity-50 cursor-not-allowed',
           !disabled && 'hover:bg-primary hover:bg-opacity-20',

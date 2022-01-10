@@ -1,9 +1,9 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 
-const COLOR_PRIMARY = '#FF92DA'
-const COLOR_SECONDARY = '#4A0734'
-const COLOR_SURFACE = '#FFFAFE'
+const COLOR_PRIMARY = '#FF92DA' // '#94FF96'
+const COLOR_SECONDARY = '#022702'
+const COLOR_SURFACE = '#FAFFFA'
 
 module.exports = {
   darkMode: false, // or 'media' or 'class'

@@ -8,10 +8,10 @@ const FrontPage: React.FC = () => {
   return (
     <div className="text-center">
       <div className="my-8">
-        <h1 className="font-display font-medium text-secondary text-5xl sm:text-7xl whitespace-nowrap">
+        <h1 className="tpg-title text-center">
           <FormattedMessage defaultMessage="SVG 🡒 PNG" id="app.title" />
         </h1>
-        <div className="my-8">
+        <div className="my-8 tpg-body-1">
           <FormattedMessage
             defaultMessage="Just a simple converter from SVG to PNG, because I needed one that provided correct conversions."
             id="app.description"

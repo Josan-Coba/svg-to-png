@@ -9,14 +9,14 @@ export default function LanguageSelector(): ReactElement {
 
   // TODO: Add a localized label for screen readers only
   return (
-    <label className="bg-surface inline-block rounded-lg">
+    <label className="inline-block rounded-lg">
       <select
-        className="capitalize font-semibold rounded-lg border-secondary shadow ringed-focus focus:border-secondary focus:ring-inset active:shadow-none"
+        className=" bg-white capitalize tpg-controller rounded-lg border-secondary shadow ringed-focus focus:border-secondary focus:ring-inset active:shadow-none"
         defaultValue={currentLocale}
         onChange={onChangeSelectedLanguage}
       >
         {availableLocales.map(({ code, ownDisplayName }) => (
-          <option className="capitalize font-semibold" key={code} value={code}>
+          <option className="capitalize tpg-controller" key={code} value={code}>
             {ownDisplayName}
           </option>
         ))}

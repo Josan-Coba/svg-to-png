@@ -32,81 +32,36 @@
     font-variant: small-caps;
   }
 
-  .tpg-app-title {
-    @apply font-display font-medium text-secondary text-left text-xl;
+  .tpg-title {
+    @apply font-display font-medium text-secondary text-5xl sm:text-7xl whitespace-nowrap;
   }
-  .tpg-title-6 {
-    @apply font-sans font-medium text-secondary text-left text-base;
+  .tpg-controller {
+    @apply font-sans font-semibold text-secondary text-base tracking-wider;
   }
-  .tpg-menu-1 {
-    @apply font-sans font-semibold text-secondary text-left text-base tracking-wider;
+  .tpg-controller-info {
+    @apply font-sans font-medium text-secondary text-sm;
   }
-  .tpg-menu-2 {
-    @apply font-sans font-medium text-secondary text-left text-sm tracking-widest;
+  .tpg-controller-label {
+    @apply font-sans font-semibold text-secondary text-xs text-opacity-70;
   }
-  .tpg-list-1 {
-    @apply font-sans font-bold text-secondary text-left text-xs;
+  .tpg-body-1 {
+    @apply font-sans font-normal text-secondary text-base;
   }
-  .tpg-list-2 {
-    @apply font-sans font-medium text-secondary text-left text-xs;
+  .tpg-body-2 {
+    @apply font-sans font-normal text-secondary text-sm;
   }
   .tpg-caption {
-    @apply font-sans font-medium text-secondary text-left text-tiny;
+    @apply font-sans font-semibold text-secondary text-left text-xs;
   }
   .tpg-prop-label {
     @apply font-sans font-semibold text-secondary text-left text-xs;
   }
-  .tpg-tool-label {
-    @apply font-sans font-semibold text-secondary text-left text-xs text-opacity-70;
-  }
-  .tpg-colrow {
-    @apply font-sans font-normal text-secondary text-left text-sm;
-  }
 }
 
 @layer components {
-  .btn-primary {
-    @apply inline-block bg-primary text-secondary font-bold px-8 py-3 rounded-lg uppercase tracking-wide shadow;
-    @apply hover:bg-surface hover:bg-opacity-20;
-    @apply ringed-focus focus:ring-inset focus:ring-offset-0 focus:ring-secondary focus:ring-opacity-80;
-    @apply active:bg-surface active:bg-opacity-50 active:shadow-none active:ring-0;
-  }
-
-  .btn-secondary {
-    @apply inline-block bg-surface text-secondary font-medium px-3 py-2 rounded-lg;
-    @apply hover:bg-primary hover:bg-opacity-20 hover:shadow-sm;
-    @apply ringed-focus focus:ring-inset focus:ring-offset-0;
-    @apply active:bg-primary active:bg-opacity-50 active:shadow-none active:ring-0;
-  }
-
-  .icon-btn-primary {
-    @apply block bg-primary text-secondary rounded-full;
-    @apply hover:bg-surface hover:bg-opacity-20;
-    @apply ring-secondary ring-opacity-80 ring-inset;
-    @apply active:bg-surface active:bg-opacity-50 active:ring-0;
-  }
-
-  .icon-btn-primary-disabled {
-    @apply block bg-primary text-secondary rounded-full opacity-50 cursor-default;
-    @apply ring-secondary ring-opacity-80 ring-inset;
-  }
-
-  .icon-btn-secondary {
-    @apply block bg-surface text-secondary rounded-full;
-    @apply hover:bg-primary hover:bg-opacity-20;
-    @apply ring-primary ring-opacity-80 ring-inset;
-    @apply active:bg-primary active:bg-opacity-50 active:ring-0;
-  }
-
-  .list-element {
-    @apply flex-none;
-  }
-
-  .list-element .focusable {
-    @apply tpg-list-2 px-4 h-full w-full flex items-center;
-    @apply hover:bg-primary hover:bg-opacity-20;
-    @apply ring-primary ring-opacity-80 ring-inset;
-    @apply active:bg-primary active:bg-opacity-50 active:ring-0;
+  .no-spinner {
+    -moz-appearance: textfield;
+    appearance: none;
   }
 
   .no-spinner::-webkit-inner-spin-button,
@@ -173,8 +128,4 @@
 
 .popper-container[data-show] {
   display: block;
-}
-
-input[type='number'] {
-  -moz-appearance: textfield;
 }

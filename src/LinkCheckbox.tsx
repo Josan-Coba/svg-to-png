@@ -116,7 +116,7 @@ export default function LinkCheckbox(props: LinkCheckboxProps): ReactElement {
       <div
         aria-hidden="true"
         className={classNames(
-          'tpg-tool-label text-sm mt-0.5 text-center w-full',
+          'tpg-controller-label text-sm mt-0.5 text-center w-full',
           disabled && 'text-opacity-50',
           isFocused && 'text-primary text-opacity-100',
         )}
@@ -127,7 +127,7 @@ export default function LinkCheckbox(props: LinkCheckboxProps): ReactElement {
         <label
           className={classNames(
             'relative flex flex-none justify-center',
-            'w-full h-full tpg-menu-1 pt-6 text-center self-center',
+            'w-full h-full tpg-controller pt-6 text-center self-center',
             disabled ? 'text-opacity-50 cursor-not-allowed' : 'cursor-pointer',
             isFocused
               ? 'border-primary border-opacity-100 border-b-2 pb-0'
@@ -177,7 +177,7 @@ export default function LinkCheckbox(props: LinkCheckboxProps): ReactElement {
           <div
             className={classNames(
               'popper-container absolute z-10 bg-surface rounded-lg min-w-max p-2',
-              'elevation-dp8 focus:outline-none tpg-prop-label text-center',
+              'elevation-dp8 focus:outline-none tpg-controller-label text-center',
             )}
             data-show={isTooltipShown}
             ref={setPopperElement}

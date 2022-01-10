@@ -151,7 +151,7 @@ module.exports = {
     new FaviconsWebpackPlugin({
       favicons: {
         appDescription: null,
-        background: '#4A0734',
+        background: '#022702',
         developerURL: null,
         icons: {
           android: false,
@@ -163,7 +163,7 @@ module.exports = {
           windows: false,
           yandex: false,
         },
-        theme_color: '#FF92DA',
+        theme_color: '#94FF96',
       },
       inject: true,
       logo: './src/static/logo.svg',

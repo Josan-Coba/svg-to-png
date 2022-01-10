@@ -29,7 +29,7 @@ const FileNameDisplay: FC<FileNameDisplayProps> = ({
 
   return (
     <div className={className}>
-      <span className="tpg-prop-label text-center flex justify-center flex-wrap">
+      <span className="tpg-caption text-center flex justify-center flex-wrap">
         <span className="flex-initial flex justify-center max-w-full">
           <span className="flex-initial block truncate">{namePart}</span>
           <span className="flex-none">{suffix}</span>
@@ -167,7 +167,7 @@ export default function SvgLoader(props: SvgLoaderProps): ReactElement {
         <div
           className={classNames(
             'w-full h-full flex items-center justify-center',
-            'font-sans font-medium text-secondary text-center text-base tracking-wider',
+            'tpg-controller text-center',
           )}
         >
           {isLoading ? (
@@ -221,7 +221,7 @@ export default function SvgLoader(props: SvgLoaderProps): ReactElement {
                   id="app.upload-resource.message-body"
                 />
               </p>
-              <p className="text-sm">
+              <p className="tpg-controller-info">
                 <FormattedMessage
                   defaultMessage="(The file will be processed in your device. It will not be sent anywhere)"
                   id="app.upload-resource.message-disclaimer"

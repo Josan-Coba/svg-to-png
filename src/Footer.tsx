@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <div>
         <LanguageSelector />
       </div>
-      <div className="pt-8">
+      <div className="pt-6">
         <a
           href="https://github.com/Josan-Coba/svg-to-png"
           rel="noreferrer"
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           <img alt="GitHub Repository" className="mx-auto" src={githubLogo} />
         </a>
       </div>
-      <div className="py-8 align-middle">
+      <div className="pt-6 pb-8 align-middle tpg-body-2">
         <FormattedMessage
           defaultMessage="Made with ❤️ by <a>Josan</a>"
           id="app.footer.made-by"
