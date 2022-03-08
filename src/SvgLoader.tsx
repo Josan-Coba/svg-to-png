@@ -79,6 +79,7 @@ export default function SvgLoader(props: SvgLoaderProps): ReactElement {
           setFileName(acceptedFiles[0].name)
           setFileSize(acceptedFiles[0].size)
           const data = fReader.result
+          console.log('DATA=', data)
           if (data) {
             const svgBlob = new Blob([data], {
               type: 'image/svg+xml;charset=utf-8',
@@ -89,7 +90,7 @@ export default function SvgLoader(props: SvgLoaderProps): ReactElement {
           }
         })
 
-        fReader.readAsBinaryString(acceptedFiles[0])
+        fReader.readAsText(acceptedFiles[0], 'utf8')
       }
     },
     [filePreview],

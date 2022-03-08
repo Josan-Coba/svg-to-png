@@ -39,6 +39,8 @@ function profileLink(chunk: ReactNode) {
     <a
       className="font-display hover:underline font-semibold"
       href="https://github.com/Josan-Coba/"
+      rel="noreferrer"
+      target="_blank"
     >
       {chunk}
     </a>
